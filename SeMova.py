@@ -221,7 +221,7 @@ def main():
                 #    st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                 #    st.markdown(mystyle0, unsafe_allow_html=True) 
                 with st.container(height=100, border=False):
-                    Sub_Titulo = '<p style="font-weight: bolder; color: #ff3131; font-size: 36px;">Cuide-se</p>'
+                    Sub_Titulo = '<p style="font-weight: bolder; color: #1c5c46; font-size: 36px;">Cuide-se</p>'
                     st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                     st.markdown(mystyle0, unsafe_allow_html=True) 
     with Colunas0[1]: 
