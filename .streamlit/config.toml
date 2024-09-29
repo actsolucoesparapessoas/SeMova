@@ -12,7 +12,7 @@ secondaryBackgroundColor = "#d2d5d2"
 
 
 # Color used for almost all text: https://hexcolorpedia.com/color/?q=blue
-textColor="1c5c46"
+textColor="#1c5c46"
 
 # Font family for all text in the app, except code blocks
 # Accepted values (serif | sans serif | monospace) 
