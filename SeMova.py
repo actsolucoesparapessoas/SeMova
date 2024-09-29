@@ -186,14 +186,11 @@ def main():
 
         
     #BARRA LATERAL
-    image = Image.open('SeMovaLOGO.png')    
+    image = Image.open('LogoNovo.jpeg')    
     st.sidebar.image(image, width=300)
     #st.image(ArqPNG, width=600, caption='Label da Figura')
     st.sidebar.divider()
-    Rodape = '<p style="font-weight: bolder; color:white; font-size: 16px;">Desenvolvedor: Massaki Igarashi / Integrante Equipe SeMova.</p>'
-    st.sidebar.markdown(Rodape, unsafe_allow_html=True)
-    mystyle0 =   '''<style> p{text-align:center;}</style>'''
-    st.sidebar.markdown(mystyle0, unsafe_allow_html=True) 
+
     #audio_file0 = open('Generactiva.mp3', 'rb')
     #audio_bytes0 = audio_file0.read()
     #st.sidebar.audio(audio_bytes0, format='audio/ogg',start_time=0)
@@ -201,6 +198,10 @@ def main():
     video_bytes = video_file.read()
     st.sidebar.video(video_bytes)
     st.sidebar.image("QRcode.png", caption="Sunrise by the mountains")
+    Rodape = '<p style="font-weight: bolder; color:white; font-size: 16px;">Desenvolvedor: Massaki Igarashi / Integrante Equipe SeMova.</p>'
+    st.sidebar.markdown(Rodape, unsafe_allow_html=True)
+    mystyle0 =   '''<style> p{text-align:center;}</style>'''
+    st.sidebar.markdown(mystyle0, unsafe_allow_html=True) 
 
     
     #============================== TÍTULO PRINCIPAL DO WEB APP ===========================================================================
@@ -210,7 +211,7 @@ def main():
             Colunas1 = st.columns(2) 
             with Colunas1[0]:
                 with st.container(height=100, border=False):
-                    Titulo_Principal = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">SeMova versão 0.1</p>'    
+                    Titulo_Principal = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">SeMova</p>'    
                     st.markdown(Titulo_Principal, unsafe_allow_html=True)
                     st.markdown(mystyle0, unsafe_allow_html=True)    
             with Colunas1[1]:  
@@ -220,7 +221,7 @@ def main():
                 #    st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                 #    st.markdown(mystyle0, unsafe_allow_html=True) 
                 with st.container(height=100, border=False):
-                    Sub_Titulo = '<p style="font-weight: bolder; color: darkblue; font-size: 36px;">Pratique esporte!</p>'
+                    Sub_Titulo = '<p style="font-weight: bolder; color: #1c5c46; font-size: 36px;">Cuide-se</p>'
                     st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                     st.markdown(mystyle0, unsafe_allow_html=True) 
     with Colunas0[1]: 
@@ -286,25 +287,25 @@ def main():
                 Altura = st.text_input("Digite sua Altura aqui 👇", "1.65") 
                 Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
                 Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Vivo com meus pais e trabalho 10 horas por dia. Tenho uma vida que sobra um pouco de tempo para lazer, gosto de séries e esportes. Tenho colegas que praticam esportes que gosto, porém nem sempre estão disponíveis junto a mim")
-                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar pessoas que gostem do mesmo tipo de atividade física que eu. Encontrar uma comunidade de prática de esposrtes") 
+                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar pessoas que gostem do mesmo tipo de atividade física que eu. Encontrar uma comunidade de prática de esportes") 
                 Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),)
                 Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
-                Persona = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este esporte na região de {Endereco}" 
-                
+                Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que o resultado seja compatível ao meu perfil fornecido." 
+            
             elif Selecao_Persona == "Carla":
                 Nome = st.text_input("Digite seu Nome aqui 👇", "Carla")  
                 Idade = st.text_input("Digite sua Idade aqui 👇", "24")  
                 Peso = st.text_input("Digite seu Peso aqui 👇", "65") 
                 Altura = st.text_input("Digite sua Altura aqui 👇", "1.60") 
                 Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
-                Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Tenho uma vida muito corrida, não tenho conhecimento de esportes que gosto ou aconteça na região, não sei por onde começar. Recebi recomendação médica para iniciar o quanto antes sua prática esportiva")
-                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a meus gostos, porém não possui outras pessoas que possam o auxiliar na escolha") 
+                Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Tenho uma vida muito corrida, não tenho conhecimento de esportes que gosto ou aconteça na região, não sei por onde começar. Recebi recomendação médica para iniciar o quanto antes minha prática esportiva")
+                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a meus gostos, porém não conheço outras pessoas que possam me auxiliar na escolha") 
                 Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),index = 1)
                 Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
-                Persona = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este esporte na região de {Endereco}" 
+                Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que tenha o resultado compatível ao meu perfil fornecido." 
             else:            
                 question = st.text_input("Digite sua pergunta aqui 👇")
-                Persona = ""
+                Prompt = ""
             
             #NLP = st.checkbox("Ativar NLP!", help="Ativa o Processamento de Linguagem Natural", value=True)        
             #if NLP:
@@ -316,11 +317,11 @@ def main():
             #    st.subheader(" ")
             #    st.subheader(" ")
                 st.header(" ")
-                st.write(Persona)
-                question = Persona
+                st.write(Prompt)
+                question = Prompt
                 BTNquestion = st.button("Pesquisar", help="Realiza a Pesquisa nas bases de IA Generativa", type="primary", use_container_width=True)            
         with tab3:
-            st.write(Persona)
+            st.write(Prompt)
     if 'ai_answer' not in st.session_state:
         st.session_state['ai_answer'] = []
 
@@ -431,14 +432,14 @@ def main():
 
     if st.session_state['ai_answer']:
         memo = str(st.session_state['ai_answer'][len(st.session_state['ai_answer'])-1])
-        Passo2 = '<p style="font-weight: bolder; color:White; font-size: 16px;">Passo 2:</p>'
+        Passo2 = '<p style="font-weight: bolder; color:White; font-size: 16px;">Recomendações:</p>'
         st.markdown(Passo2, unsafe_allow_html=True)
         st.markdown(mystyle0, unsafe_allow_html=True)
         st.write(memo)
         memo = memo.replace("*", " ")
         memo2 = st.text_input("Resposta editável:", memo)
         
-        Passo3 = '<p style="font-weight: bolder; color:White; font-size: 16px;">Passo 3:</p>'
+        Passo3 = '<p style="font-weight: bolder; color:White; font-size: 16px;">Recomendações + Áudio:</p>'
         st.markdown(Passo3, unsafe_allow_html=True)
         st.markdown(mystyle0, unsafe_allow_html=True)
         #NomeArq = st.sidebar.text_input("Digite nome do arquivo.DOCx e tecle ENTER: 👉", 'generactiva.docx')
