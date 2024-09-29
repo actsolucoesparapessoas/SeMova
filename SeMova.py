@@ -30,30 +30,13 @@ from ACT_CNC_lib import *
 
 
 #MENU E CONFIGURAÇÕES DA PÁGINA
-ajuda = "https://docs.streamlit.io" 
-ajuda = bug = "mailto:informacoes.actsp@gmail.com"
+ajuda = "mailto:semova.app@gmail.com" 
+bug = "mailto:semova.app@gmail.com"
 sobre = '''
         AGENDAR Evento_Teste 26 06 2024 1800 26 06 2024 1900
         
         **Desenvolvido por Massaki de O. Igarashi e Equipe**
-            
-        DICAS DE UTILIZAÇÃO:
-            
-        **- Passo 1:**  Faça sua Pesquisa (na aba "Perguntas&Respostas")   
-        **- Passo 2:**  Será exibida a resposta à sua pesquisa 
-                        com uma cópia na caixa de texto caso deseje editá-la). 
-                            
-        **- Passo 3:**  Será exibido o Botão ✔️ Salvar resp no arq.DOCx junto ao
-                        Histórico de Pesquisa(s) e Resposta(s)
-                        OBS: ao clicar no botão ✔️ Salvar resp no arq.DOCx você salvará
-                        a resposta obtida e eventualmente editada.
-                        Também é possível modificar o título do arq.DOCx a ser salvo 
-                        clicando na caixa de ↪️ Título do arq.DOCX na bara laterial esquerda.
-                            
-        **- Passo 4:**  Edição do Documento.DOCx salvo anteriormente        
-                        - Observa-se que para editar o arq.DOCx salvo basta ir na Barra laterial
-                        esquerda e clicar no Menu 📝 Editor DOCx
-                            
+                                        
         '''
             
 icone = "©️"
@@ -207,7 +190,7 @@ def main():
     st.sidebar.image(image, width=300)
     #st.image(ArqPNG, width=600, caption='Label da Figura')
     st.sidebar.divider()
-    Rodape = '<p style="font-weight: bolder; color:white; font-size: 16px;">Desenvolvido por Massaki de O. Igarashi / Integrante da Equipe SeMova.</p>'
+    Rodape = '<p style="font-weight: bolder; color:white; font-size: 16px;">Desenvolvedor: Massaki Igarashi / Integrante Equipe SeMova.</p>'
     st.sidebar.markdown(Rodape, unsafe_allow_html=True)
     mystyle0 =   '''<style> p{text-align:center;}</style>'''
     st.sidebar.markdown(mystyle0, unsafe_allow_html=True) 
@@ -217,6 +200,7 @@ def main():
     video_file = open("SeMova.mp4", "rb")
     video_bytes = video_file.read()
     st.sidebar.video(video_bytes)
+    st.sidebar.image("QRcode.png", caption="Sunrise by the mountains")
 
     
     #============================== TÍTULO PRINCIPAL DO WEB APP ===========================================================================
@@ -314,7 +298,7 @@ def main():
                 Altura = st.text_input("Digite sua Altura aqui 👇", "1.60") 
                 Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
                 Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Tenho uma vida muito corrida, não tenho conhecimento de esportes que gosto ou aconteça na região, não sei por onde começar. Recebi recomendação médica para iniciar o quanto antes sua prática esportiva")
-                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a seus gostos, porém não possui outras pessoas que possam o auxiliar na escolha") 
+                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a meus gostos, porém não possui outras pessoas que possam o auxiliar na escolha") 
                 Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),index = 1)
                 Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
                 Persona = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este esporte na região de {Endereco}" 
