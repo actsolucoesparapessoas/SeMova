@@ -276,11 +276,35 @@ def main():
         
     tab1, tab2, tab3 = st.tabs(["Persona", "Consulta", "Resumo"]) 
     with tab1:         
-        Selecao_Persona = st.radio("Persona?", ["Pedro", "Carla", "Generica"], captions=["Persona Pedro.","Persona Carla.", "Pergunta Generica.",],)
+        Selecao_Persona = st.radio("Persona?", ["Carla", "João", "Pedro", "Generica"], captions=["Persona Carla.", "Persona João.", "Persona Pedro.", "Pergunta Generica.",],)
     with tab2: 
         Colunas1 = st.columns(2)
         with Colunas1[0]:
-            if Selecao_Persona == "Pedro":
+            if Selecao_Persona == "Carla":
+                Nome = st.text_input("Digite seu Nome aqui 👇", "Carla")  
+                Idade = st.text_input("Digite sua Idade aqui 👇", "24")  
+                Peso = st.text_input("Digite seu Peso aqui 👇", "65") 
+                Altura = st.text_input("Digite sua Altura aqui 👇", "1.60") 
+                Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
+                Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Tenho uma vida muito corrida, não tenho conhecimento de esportes que gosto ou aconteça na região, não sei por onde começar. Recebi recomendação médica para iniciar o quanto antes minha prática esportiva")
+                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a meus gostos, porém não conheço outras pessoas que possam me auxiliar na escolha") 
+                Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),index = 1)
+                Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
+                Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que tenha o resultado compatível ao meu perfil fornecido." 
+            
+            elif Selecao_Persona == "João":
+                Nome = st.text_input("Digite seu Nome aqui 👇", "João")  
+                Idade = st.text_input("Digite sua Idade aqui 👇", "25")  
+                Peso = st.text_input("Digite seu Peso aqui 👇", "72") 
+                Altura = st.text_input("Digite sua Altura aqui 👇", "1.75") 
+                Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
+                Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Moro só e trabalho 8 horas por dia. Tenho uma vida que sobra um pouco de tempo para lazer")
+                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar lugares para prática de esportes") 
+                Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),)
+                Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
+                Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que o resultado seja compatível ao meu perfil fornecido." 
+            
+            elif Selecao_Persona == "Pedro":
                 Nome = st.text_input("Digite seu Nome aqui 👇", "Pedro")  
                 Idade = st.text_input("Digite sua Idade aqui 👇", "28")  
                 Peso = st.text_input("Digite seu Peso aqui 👇", "70") 
@@ -292,17 +316,6 @@ def main():
                 Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
                 Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que o resultado seja compatível ao meu perfil fornecido." 
             
-            elif Selecao_Persona == "Carla":
-                Nome = st.text_input("Digite seu Nome aqui 👇", "Carla")  
-                Idade = st.text_input("Digite sua Idade aqui 👇", "24")  
-                Peso = st.text_input("Digite seu Peso aqui 👇", "65") 
-                Altura = st.text_input("Digite sua Altura aqui 👇", "1.60") 
-                Endereco =  st.text_input("Digite seu Endereço aqui 👇", "Jundiaí - SP")
-                Comportamento = st.text_input("Breve resumo de sua rotina 👇", "Tenho uma vida muito corrida, não tenho conhecimento de esportes que gosto ou aconteça na região, não sei por onde começar. Recebi recomendação médica para iniciar o quanto antes minha prática esportiva")
-                Necessidades = st.text_input("Principais necessidades aqui 👇", "Encontrar um esporte que seja alinhado a meus gostos, porém não conheço outras pessoas que possam me auxiliar na escolha") 
-                Sexo = st.selectbox("Qual o seu Sexo?",("Masculino", "Feminino", "Não Binário"),index = 1)
-                Pratica_Esportes = st.selectbox("Pratica Esportes",("Não", "Sim"),)    
-                Prompt = f"Me chamo {Nome}, tenho {Idade} anos, {Peso} kg, {Altura} metros de altura, sou do sexo {Sexo}, {Pratica_Esportes} pratico esportes, preciso {Necessidades}; por isso quero que me forneça uma recomendação de esportes que devo começar a praticar baseado nas neste meu perfil. Ah, quero que considere também o meu comportamento a seguir: {Comportamento}. Não esqueça de me recomendar comunidades ou grupos que praticam este(s) esporte(s) em {Endereco}. Quero que seja acertivo referente às minhas habilidades e interesses para que tenha o resultado compatível ao meu perfil fornecido." 
             else:            
                 question = st.text_input("Digite sua pergunta aqui 👇")
                 Prompt = ""
