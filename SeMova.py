@@ -211,7 +211,7 @@ def main():
             Colunas1 = st.columns(2) 
             with Colunas1[0]:
                 with st.container(height=100, border=False):
-                    Titulo_Principal = '<p style="font-weight: bolder; color: #5584d1; font-size: 42px;">SeMova</p>'    
+                    Titulo_Principal = '<p style="font-weight: bolder; color: #1c5c46; font-size: 42px;">SeMova</p>'    
                     st.markdown(Titulo_Principal, unsafe_allow_html=True)
                     st.markdown(mystyle0, unsafe_allow_html=True)    
             with Colunas1[1]:  
@@ -221,7 +221,7 @@ def main():
                 #    st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                 #    st.markdown(mystyle0, unsafe_allow_html=True) 
                 with st.container(height=100, border=False):
-                    Sub_Titulo = '<p style="font-weight: bolder; color: #1c5c46; font-size: 36px;">Cuide-se</p>'
+                    Sub_Titulo = '<p style="font-weight: bolder; color: #ff3131; font-size: 36px;">Cuide-se</p>'
                     st.markdown(Sub_Titulo, unsafe_allow_html=True)        
                     st.markdown(mystyle0, unsafe_allow_html=True) 
     with Colunas0[1]: 
